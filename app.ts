@@ -57,7 +57,7 @@ app.post("/", (req: Request, res: Response) => {
     }
 });
 
-// Hanya izinkan POST, tolak method lain
+
 app.all("/reformat", (_req: Request, res: Response) => {
     return res.status(405).json({ error: "Only POST requests are allowed" });
 });
